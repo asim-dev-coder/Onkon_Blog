@@ -1,0 +1,132 @@
+[
+    {
+      "id": 1,
+      "title": "The Future of Web Development with AI",
+      "cover_img": "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "John Doe",
+        "img": "https://startersites.io/blocksy/tasty/wp-content/uploads/2021/04/chief-1@2x.jpg"
+      },
+      "description": "Explore how AI is revolutionizing web development, automating tasks, and enhancing user experiences.",
+      "publish_date": "2025-03-05",
+      "category": "Web Development",
+      "tags": ["AI", "Web Development", "Automation", "Technology"]
+    },
+    {
+      "id": 2,
+      "title": "Mastering Tailwind CSS for Responsive Design",
+      "cover_img": "https://images.pexels.com/photos/2414433/pexels-photo-2414433.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "Jane Smith",
+        "img": "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-1/472009300_557526777119280_533781909713140935_n.jpg?stp=c0.0.1099.1099a_dst-jpg_s160x160_tt6&_nc_cat=105&ccb=1-7&_nc_sid=fe756c&_nc_ohc=KZLjA9c5DwgQ7kNvgHBbMkG&_nc_oc=Adhj3J1VqXlEO8Zsd0BpdOTsmVZZJWQ12jmvDNW_5xxdXO_L7F0Bb8L0zjI2D8sXcEI&_nc_zt=24&_nc_ht=scontent.fdac138-2.fna&_nc_gid=AeOOJYRVho8N3J_9nASGfIK&oh=00_AYAe7Wvw68i7sW8MsQPKbt8fAW-qoELQf1Fse6ldK7eZ4w&oe=67CF14B3"
+      },
+      "description": "Learn how to create beautiful and responsive web designs effortlessly using Tailwind CSS.",
+      "publish_date": "2025-03-02",
+      "category": "CSS",
+      "tags": ["Tailwind CSS", "Responsive Design", "Web Design"]
+    },
+    {
+      "id": 3,
+      "title": "Building Scalable Applications with Node.js",
+      "cover_img": "https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "Alex Johnson",
+        "img": "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-1/472009300_557526777119280_533781909713140935_n.jpg?stp=c0.0.1099.1099a_dst-jpg_s160x160_tt6&_nc_cat=105&ccb=1-7&_nc_sid=fe756c&_nc_ohc=KZLjA9c5DwgQ7kNvgHBbMkG&_nc_oc=Adhj3J1VqXlEO8Zsd0BpdOTsmVZZJWQ12jmvDNW_5xxdXO_L7F0Bb8L0zjI2D8sXcEI&_nc_zt=24&_nc_ht=scontent.fdac138-2.fna&_nc_gid=AeOOJYRVho8N3J_9nASGfIK&oh=00_AYAe7Wvw68i7sW8MsQPKbt8fAW-qoELQf1Fse6ldK7eZ4w&oe=67CF14B3"
+      },
+      "description": "Discover the best practices for building scalable and high-performance applications with Node.js.",
+      "publish_date": "2025-02-28",
+      "category": "Backend Development",
+      "tags": ["Node.js", "Scalability", "Performance", "Backend"]
+    },
+    {
+      "id": 4,
+      "title": "A Beginner's Guide to React Hooks",
+      "cover_img": "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "Emily Brown",
+        "img": "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-1/472009300_557526777119280_533781909713140935_n.jpg?stp=c0.0.1099.1099a_dst-jpg_s160x160_tt6&_nc_cat=105&ccb=1-7&_nc_sid=fe756c&_nc_ohc=KZLjA9c5DwgQ7kNvgHBbMkG&_nc_oc=Adhj3J1VqXlEO8Zsd0BpdOTsmVZZJWQ12jmvDNW_5xxdXO_L7F0Bb8L0zjI2D8sXcEI&_nc_zt=24&_nc_ht=scontent.fdac138-2.fna&_nc_gid=AeOOJYRVho8N3J_9nASGfIK&oh=00_AYAe7Wvw68i7sW8MsQPKbt8fAW-qoELQf1Fse6ldK7eZ4w&oe=67CF14B3"
+      },
+      "description": "Understand React Hooks and how they simplify state management and side effects in React applications.",
+      "publish_date": "2025-02-25",
+      "category": "React",
+      "tags": ["React", "Hooks", "State Management"]
+    },
+    {
+      "id": 5,
+      "title": "How to Optimize Your Website for SEO in 2025",
+      "cover_img": "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "Michael Lee",
+        "img": "https://example.com/images/michael-lee.jpg"
+      },
+      "description": "Stay ahead in search rankings by implementing the latest SEO strategies and best practices.",
+      "publish_date": "2025-02-20",
+      "category": "SEO",
+      "tags": ["SEO", "Digital Marketing", "Optimization"]
+    },
+    {
+      "id": 6,
+      "title": "Why TypeScript is a Game-Changer for JavaScript Developers",
+      "cover_img": "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "author": {
+        "name": "Sophia Wilson",
+        "img": "https://example.com/images/sophia-wilson.jpg"
+      },
+      "description": "Learn why TypeScript is gaining popularity and how it enhances JavaScript development.",
+      "publish_date": "2025-02-15",
+      "category": "JavaScript",
+      "tags": ["TypeScript", "JavaScript", "Development"]
+    },
+    {
+      "id": 7,
+      "title": "Introduction to Headless CMS: Benefits and Use Cases",
+      "cover_img": "https://example.com/images/headless-cms.jpg",
+      "author": {
+        "name": "David Anderson",
+        "img": "https://example.com/images/david-anderson.jpg"
+      },
+      "description": "Discover the advantages of using a Headless CMS for content management and website development.",
+      "publish_date": "2025-02-10",
+      "category": "CMS",
+      "tags": ["Headless CMS", "Content Management", "Web Development"]
+    },
+    {
+      "id": 8,
+      "title": "Building a Full-Stack Web App with MERN Stack",
+      "cover_img": "https://example.com/images/mern-stack.jpg",
+      "author": {
+        "name": "Chris Evans",
+        "img": "https://example.com/images/chris-evans.jpg"
+      },
+      "description": "Learn how to build a powerful full-stack web application using MongoDB, Express, React, and Node.js.",
+      "publish_date": "2025-02-05",
+      "category": "Full-Stack Development",
+      "tags": ["MERN Stack", "Full-Stack", "React", "Node.js"]
+    },
+    {
+      "id": 9,
+      "title": "Understanding API Development with Express.js",
+      "cover_img": "https://example.com/images/api-express.jpg",
+      "author": {
+        "name": "Olivia Martinez",
+        "img": "https://example.com/images/olivia-martinez.jpg"
+      },
+      "description": "A step-by-step guide to building and securing APIs using Express.js.",
+      "publish_date": "2025-02-01",
+      "category": "Backend Development",
+      "tags": ["API", "Express.js", "Backend", "Security"]
+    },
+    {
+      "id": 10,
+      "title": "Freelancing as a Web Developer: How to Get Started",
+      "cover_img": "https://example.com/images/freelancing-webdev.jpg",
+      "author": {
+        "name": "Daniel White",
+        "img": "https://example.com/images/daniel-white.jpg"
+      },
+      "description": "A guide for web developers on how to start freelancing, find clients, and grow their business.",
+      "publish_date": "2025-01-28",
+      "category": "Freelancing",
+      "tags": ["Freelancing", "Web Development", "Career Growth"]
+    }
+  ]
