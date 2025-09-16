@@ -96,23 +96,6 @@ const NavBar = ({ title, image }) => {
               )}
             </div>
           </div>
-          <div className="flex items-center lg:ml-10 xl:ml-20">
-            {" "}
-            <div className="relative w-full md:w-[400px] lg:w-[500px]">
-              <input
-                className="w-full pl-4 pr-10 py-3 text-sm text-gray-700 placeholder-gray-500 bg-white border border-gray-300 rounded-3xl focus:outline-none"
-                type="text"
-                placeholder="Search Tasks..."
-              />
-              <IoSearchSharp className="absolute right-3 top-1/2 transform -translate-y-1/2 text-sky-500 text-lg cursor-pointer hover:text-[#1198ad] transition-colors duration-200" />
-            </div>
-          </div>
-          <Link to="/" className="hidden lg:flex">
-            <div className="flex text-2xl font-semibold">
-              <h1 className="caveat text-sky-500 text-3xl">Tipu's</h1>
-              <span className="caveat text-3xl">World</span>
-            </div>
-          </Link>
           <div>
             <Link
               to="/products"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Exblog = () => {
+const Header = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold text-center text-[#00a9e7]'>Exclusive Blog</h1>
@@ -8,4 +8,4 @@ const Exblog = () => {
     );
 };
 
-export default Exblog;
+export default Header;

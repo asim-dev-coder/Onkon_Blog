@@ -4,6 +4,7 @@ import NavBar from "./Components/Header/NavBar";
 import TopHeader from "./Components/Header/TopHeader";
 import { Outlet } from "react-router-dom";
 import MouseAnimation from "./Components/MouseAnimation";
+import MidHeader from "./Components/Header/MidHeader";
 import ScrollButton from "./Components/ScrollButton";
 
 const Root = () => {
@@ -13,6 +14,7 @@ const Root = () => {
       <div className="sticky top-0 z-10">
         <TopHeader />
       </div>
+      <MidHeader />
       <div className="sticky top-0 z-20">
         <NavBar />
       </div>
