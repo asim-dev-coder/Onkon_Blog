@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 const MidHeader = () => {
   return (
-    <div className="bg-gradient-to-l from-teal-100 via-amber-100 to-indigo-100 md:border-b md:border-gray-200 lg:border-none">
+    <div className="bg-gradient-to-b from-sky-100 via-lime-100 to-white md:border-gray-200 lg:border-none">
       {/* Desktop View */}
       <div className="hidden lg:flex items-center gap-5 w-11/12 mx-auto py-2">
         <div className="flex items-center">
           {" "}
           <div className="relative w-full md:w-[400px] lg:w-[650px]">
             <input
-              className="w-full pl-4 pr-10 py-3 text-sm text-gray-700 placeholder-gray-500 bg-white border border-gray-300 rounded-3xl focus:outline-none"
+              className="w-full pl-4 pr-10 py-3 text-sm text-gray-700 placeholder-gray-500 bg-white border border-gray-400 rounded-3xl focus:outline-none"
               type="text"
               placeholder="Search..."
             />
