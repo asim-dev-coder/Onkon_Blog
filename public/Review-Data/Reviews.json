@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "image": "https://perfume-bd.com/wp-content/uploads/2021/04/Untitled-design-68-3.png",
+    "reviewer": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2Usg2UopEbuhyiKk494h4erKyKUYaGsnrVEqjREFWpA2nDpbFTsCrJAiCvHr4JqyUGk&usqp=CAU",
+    "title": "Best for Party...",
+    "subtitle": "Discover how organic farming promotes sustainability, protects the environment, and produces healthier food for you and your family.",
+    "description": "Organic farming is a method of crop and livestock production that involves much more than choosing not to use pesticides, fertilizers, genetically modified organisms, antibiotics, and growth hormones. Organic production is a holistic system designed to optimize the productivity and fitness of diverse communities within the agro-ecosystem, including soil organisms, plants, livestock, and people. The principal goal of organic production is to develop enterprises that are sustainable and harmonious with the environment.",
+    "author": "John Doe",
+    "date": "2023-10-01",
+    "comments": 5,
+    "likes": 20,
+    "category": "MEN"
+  },
+  {
+    "id": 2,
+    "image": "https://perfume-bd.com/wp-content/uploads/2018/09/dkny-be-delicious-women-100-ml-1-600x600.jpg",
+    "reviewer": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzTWQoCUbRNdiyorem5Qp1zYYhpliR9q0Bw&s",
+    "title": "Gift to Your Loved Ones...",
+    "subtitle": "Learn about the top fruits packed with vitamins, minerals, and antioxidants to boost your health and immunity.",
+    "description": "Eating a variety of fruits is a great way to ensure you're getting a range of nutrients. Fruits are packed with vitamins, minerals, and antioxidants that can help protect your body from disease. Some of the healthiest fruits include apples, bananas, oranges, strawberries, and blueberries. Each of these fruits offers unique health benefits, from improving heart health to boosting your immune system. Incorporating a mix of these fruits into your daily diet can help you maintain a healthy lifestyle.",
+    "author": "Jane Smith",
+    "date": "2023-10-02",
+    "comments": 8,
+    "likes": 35,
+    "category": "WOMEN"
+  },
+  {
+    "id": 3,
+    "image": "https://m.media-amazon.com/images/I/81DX0j8CzvL._UF350,350_QL80_.jpg",
+    "reviewer": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIzg9A5gpzykDBpzJ_gdLTD2TTyWKAnNQsqG9hKKvy_aLospIEuOrUaInujdERXvTG9Wg&usqp=CAU",
+    "title": "Long Lasting Fragrance...",
+    "subtitle": "Start your own vegetable garden at home with these easy tips and enjoy fresh, organic produce right from your backyard.",
+    "description": "Growing your own vegetables at home can be a rewarding experience. Not only do you get to enjoy fresh, organic produce, but you also have the satisfaction of knowing exactly where your food comes from. To get started, choose a sunny spot in your yard or balcony, prepare the soil, and select the vegetables you want to grow. Some easy vegetables for beginners include tomatoes, lettuce, and carrots. With a little care and attention, you can have a thriving vegetable garden in no time.",
+    "author": "Alice Johnson",
+    "date": "2023-10-03",
+    "comments": 12,
+    "likes": 45,
+    "category": "UNISEX"
+  },
+  {
+    "id": 4,
+    "image": "https://perfume-bd.com/wp-content/uploads/2021/04/Untitled-design-14-37.png",
+    "reviewer": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxkpd0CkaqbEEpzHuTQSU_-ot1hlOcUl1IS50rMgZUcFvg4iO6jPYUPWYA6a5f4Va4_2c&usqp=CAU",
+    "title": "Not so good",
+    "subtitle": "Understand the negative effects of fast food on your health and how to make better dietary choices for a healthier life.",
+    "description": "Fast food is often high in calories, fat, sugar, and salt, which can lead to a range of health problems if consumed in excess. Regular consumption of fast food has been linked to obesity, heart disease, diabetes, and other chronic conditions. While it's okay to enjoy fast food occasionally, it's important to balance it with healthier food choices. Opt for grilled instead of fried items, choose water or unsweetened beverages, and add a side of vegetables or fruit to your meal.",
+    "author": "Michael Brown",
+    "date": "2023-10-04",
+    "comments": 7,
+    "likes": 28,
+    "category": "New Arrival"
+  },
+  {
+    "id": 5,
+    "image": "https://perfume-bd.com/wp-content/uploads/2017/01/elizabeth-arden-arden-beauty-edp-100ml-for-women-3-600x600.jpg",
+    "reviewer": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH5F4pyxq3LzDq06s-bw6UlYldExGzgkQlIvlTjMTpPvp-RjDlzhAZBX6vbHrzrD7FpI4&usqp=CAU",
+    "title": "Best in affordable price...",
+    "subtitle": "Explore the reasons why organic food is a better choice for your health and the environment, despite its higher price.",
+    "description": "Organic food is often more expensive than conventionally grown food, but many people believe it's worth the extra cost. Organic farming practices are designed to be more sustainable and environmentally friendly, which can lead to healthier soil, water, and ecosystems. Additionally, organic food is free from synthetic pesticides and fertilizers, which some people prefer to avoid. While the health benefits of organic food are still debated, many consumers choose organic for its perceived safety and environmental benefits.",
+    "author": "Emily Davis",
+    "date": "2023-10-05",
+    "comments": 10,
+    "likes": 50,
+    "category": "Popular"
+  }
+]

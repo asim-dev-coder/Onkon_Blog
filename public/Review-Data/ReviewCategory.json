@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "MEN"
+  },
+  {
+    "id": 2,
+    "name": "WOMEN"
+  },
+  {
+    "id": 3,
+    "name": "UNISEX"
+  },
+  {
+    "id": 4,
+    "name": "New Arrival"
+  },
+  {
+    "id": 5,
+    "name": "Popular"
+  }
+]
