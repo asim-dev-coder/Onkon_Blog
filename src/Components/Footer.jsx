@@ -18,10 +18,10 @@ const Footer = () => {
           <div className="lg:flex xl:flex justify-between gap-8">
             <div className=" flex flex-col gap-6 w-full md:w-100">
               <div className="flex text-2xl font-semibold">
-                <h1 className="text-black caveat text-3xl">Assim</h1><span className="text-sky-500 text-3xl caveat">Dashboard</span>
+                <h1 className="text-black caveat text-3xl">Tipu's</h1><span className="text-sky-500 text-3xl caveat">World</span>
               </div>
               <p className="hover:text-[#426fdf] transition">
-                Delivary Fee Taka 100 within Dhaka
+                Subscribe for Our Newsletter
               </p>
               <div>
                 <h4 className="font-semibold text-lg text-gray-700 mb-2">Follow Us</h4>
@@ -129,7 +129,7 @@ const Footer = () => {
                       to="mailto:info@grabit.com"
                       className="hover:text-[#426fdf] transition"
                     >
-                      info@assimperfume.com
+                      asimankon@gmail.com
                     </Link>
                   </div>
                 </div>

@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { HiMiniBars3CenterLeft } from "react-icons/hi2";
+import { IoIosHome } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { LuUserRound } from "react-icons/lu";
+import { FaRegHeart } from "react-icons/fa6";
+import { IoNotifications } from "react-icons/io5";
+import { CiLogin } from "react-icons/ci";
+import { useCart } from "../../context/CartContext";
 
 const NavBar = ({ title, image }) => {
   const [categories, setCategories] = useState([]);
@@ -34,75 +39,153 @@ const NavBar = ({ title, image }) => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
+  const { totalItems } = useCart();
   return (
     <>
       <div className="bg-white border-t border-b border-gray-200 hidden lg:block">
         <div className="flex justify-between items-center w-11/12 mx-auto py-4">
-          <div className="flex items-center ">
+          <div
+            className=""
+            ref={dropdownRef}
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
             <div
-              className=""
-              ref={dropdownRef}
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              tabIndex={0}
+              role="button"
+              className="btn bg-green-300 border-none px-4 py-6 rounded-lg transition duration-300 cursor-pointer flex gap-2"
             >
-              <div
+              <IoIosHome className="font-bold text-xl text-black" />
+            </div>
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <ul
                 tabIndex={0}
-                role="button"
-                className="btn bg-green-300 border-none px-4 py-6 rounded-lg transition duration-300 cursor-pointer flex gap-2"
+                className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-l from-teal-200 to-amber-200 hover:bg-gray-100"
               >
-                <HiMiniBars3CenterLeft className="font-bold text-xl text-black" />
-                <p className="text-[17px] text-black">My Menu</p>
-                <MdOutlineKeyboardArrowDown
-                  className={`font-bold text-xl transform transition-transform duration-300 text-black ${
-                    isDropdownOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </div>
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-l from-teal-200 to-amber-200 hover:bg-gray-100"
-                >
-                  {categories.map((category, index) => (
-                    <li key={index}>
-                      <Link
-                        to={`/products?category=${encodeURIComponent(
-                          category
-                        )}`}
-                        className="text-[16px] cursor-pointer hover:bg-gray-100"
-                        onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
-                      >
-                        {category}
-                        <img
-                          className="w-full h-full object-cover"
-                          src={image}
-                          alt={title}
-                        />
-                      </Link>
-                    </li>
-                  ))}
-                  <li>
+                {categories.map((category, index) => (
+                  <li key={index}>
                     <Link
-                      to="/products"
+                      to={`/products?category=${encodeURIComponent(category)}`}
                       className="text-[16px] cursor-pointer hover:bg-gray-100"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >
-                      Settings
+                      {category}
+                      <img
+                        className="w-full h-full object-cover"
+                        src={image}
+                        alt={title}
+                      />
                     </Link>
                   </li>
-                </ul>
-              )}
-            </div>
+                ))}
+                <li>
+                  <Link
+                    to="/products"
+                    className="text-[16px] cursor-pointer hover:bg-gray-100"
+                    onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                  >
+                    Settings
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
-          <div>
-            <Link
-              to="/products"
-              className="bg-green-300 hover:text-white text-base text-black p-3 rounded-lg hover:bg-[#426fdf] transition duration-300 cursor-pointer font-medium"
+          <div
+            className=""
+            ref={dropdownRef}
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn bg-green-300 border-none px-4 py-6 rounded-lg transition duration-300 cursor-pointer flex gap-2"
             >
-              Log In
+              <p className="text-[17px] text-black">My Menu</p>
+              <MdOutlineKeyboardArrowDown
+                className={`font-bold text-xl transform transition-transform duration-300 text-black ${
+                  isDropdownOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </div>
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-l from-teal-200 to-amber-200 hover:bg-gray-100"
+              >
+                {categories.map((category, index) => (
+                  <li key={index}>
+                    <Link
+                      to={`/products?category=${encodeURIComponent(category)}`}
+                      className="text-[16px] cursor-pointer hover:bg-gray-100"
+                      onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                    >
+                      {category}
+                      <img
+                        className="w-full h-full object-cover"
+                        src={image}
+                        alt={title}
+                      />
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    to="/products"
+                    className="text-[16px] cursor-pointer hover:bg-gray-100"
+                    onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                  >
+                    Settings
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/yourcart"
+              className="btn btn-ghost p-0 hover:bg-transparent"
+            >
+              <div class="relative flex items-center justify-center">
+                {/* Base Shape  */}
+                <IoNotifications className="text-2xl text-teal-500" />
+                {/* Overlapping Shape */}
+                <div className="absolute top-1 left-5 -translate-x-1/2 -translate-y-1/2 bg-sky-500 w-4 h-4 rounded-full z-10 flex items-center justify-center text-white font-bold">
+                  {totalItems}
+                </div>
+              </div>
             </Link>
+            <Link
+              to="/wishlist"
+              className="btn btn-ghost p-0 hover:bg-transparent"
+            >
+              <FaRegHeart className="text-2xl text-teal-500" />
+            </Link>
+            <div className="dropdown dropdown-end">
+              <label
+                tabIndex={0}
+                className="btn btn-ghost p-0 hover:bg-transparent"
+              >
+                <LuUserRound className="text-2xl text-teal-500" />
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow text-black bg-gradient-to-r from-sky-200 to-amber-200 rounded-box w-[92px] mt-2"
+              >
+                <li>
+                  <Link to="/signup" className="w-[72px] hover:bg-gray-100">
+                    Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login" className="w-[82px] hover:bg-gray-100">
+                    Login <CiLogin size={23} className="text-black" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

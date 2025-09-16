@@ -5,6 +5,8 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { LuUserRound } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoNotifications } from "react-icons/io5";
+import { CiLogin } from "react-icons/ci";
+import { useCart } from "../../context/CartContext";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { CiCirclePlus } from "react-icons/ci";
@@ -13,8 +15,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
-import { CiLogin } from "react-icons/ci";
-import { useCart } from "../../context/CartContext";
+
 
 const TopHeader = () => {
   const { totalItems } = useCart();
