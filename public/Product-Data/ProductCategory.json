@@ -2,54 +2,63 @@
   {
     "id": 1,
     "name": "এআই",
+    "type": ["মেশিন লার্নিং", "ডেটা সায়েন্স"],
     "image": "https://t3.ftcdn.net/jpg/11/85/63/60/360_F_1185636004_4bj2yTD1JMWivPFQOSetCcbBhgaCOaGE.jpg",
     "icon": "https://cdn-icons-png.flaticon.com/128/8080/8080628.png"
   },
   {
     "id": 2,
     "name": "প্রোগ্রামিং",
+    "type": ["ছোটদের স্ক্র্যচ প্রোগ্রামিং"],
     "image": "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/ah0ud2p9qfsvf2sqer0p",
     "icon": "https://cdn-icons-png.flaticon.com/128/1047/1047813.png"
   },
   {
     "id": 3,
     "name": "রোবোটিক্স",
+    "type": ["আলফা ১", "ড্রোন"],
     "image": "https://media.printables.com/media/prints/638980/images/5050324_41f4fa37-1a92-46fe-aa46-1d3643f52497_ef82759b-0317-48a3-aa57-62340e5b7d22/thumbs/inside/1280x960/png/tesla-logo.webp",
     "icon": "https://cdn-icons-png.flaticon.com/128/10981/10981617.png"
   },
   {
     "id": 4,
     "name": "টেক দুনিয়া",
+    "type": ["গেমিং ল্যাপটপ"],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   },
   {
     "id": 5,
     "name": "স্পোর্টস",
+    "type": ["ফুটবল", "ক্রিকেট"],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   },
   {
     "id": 6,
     "name": "গেমিং",
+    "type": ["", ""],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   },
   {
     "id": 7,
     "name": "ফটোগ্রাফি",
+    "type": ["", ""],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   },
   {
     "id": 8,
     "name": "ট্রাভেল",
+    "type": ["", ""],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   },
   {
     "id": 9,
     "name": "খাইদাই",
+    "type": ["", ""],
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
     "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
   }

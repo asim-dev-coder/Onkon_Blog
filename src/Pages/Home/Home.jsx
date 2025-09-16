@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <AllCategories categories={categories} />
+      {/* <AllCategories categories={categories} />
       <DayOfTheDeal category={category} />
       <Offer />
       <MostPopularProducts
@@ -61,7 +61,7 @@ const Home = () => {
         topRatedProducts={topRatedProducts}
       />
       <Review blogs={blogs} />
-      <FAQ />
+      <FAQ /> */}
     </>
   );
 };

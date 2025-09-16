@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoIosHome } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
@@ -9,10 +9,11 @@ import { IoNotifications } from "react-icons/io5";
 import { CiLogin } from "react-icons/ci";
 import { useCart } from "../../context/CartContext";
 
-const NavBar = ({ title, image }) => {
+const NavBar = ({}) => {
   const [categories, setCategories] = useState([]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  // track which category is open
+  const [openCategory, setOpenCategory] = useState(null); // track open category
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
 
   useEffect(() => {
     fetch("/Product-Data/ProductCategory.json")
@@ -22,16 +23,6 @@ const NavBar = ({ title, image }) => {
       });
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
   const { totalItems } = useCart();
   return (
     <>
@@ -44,58 +35,48 @@ const NavBar = ({ title, image }) => {
           >
             <IoIosHome className="font-bold text-xl text-black" />
           </Link>
-          <div
-            className=""
-            ref={dropdownRef}
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <div className="flex gap-7">
-              {categories.map((category) => (
-                <Link to={`/products?category=${encodeURIComponent()}`}>
-                  <div className="flex items-center gap-2">
-                    <p className="text-[17px] text-black font-semibold">{category.name}</p>
-                    <MdOutlineKeyboardArrowDown
-                      className={`font-bold text-xl transform transition-transform duration-300 text-black ${
-                        isDropdownOpen ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </div>
-                </Link>
-              ))}
-            </div>
-            {/* Dropdown Menu */}
-            {isDropdownOpen && (
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-r from-amber-100 to-sky-100 hover:bg-gray-100"
+          <div className="flex gap-7">
+            {categories.map((category) => (
+              <div
+                onMouseEnter={() => setOpenCategory(category.id)}
+                onMouseLeave={() => setOpenCategory(null)}
               >
-                {categories.map((category) => (
-                  <li key={category.id}>
-                    <Link
-                      to={`/products?category=${encodeURIComponent(
-                        category.name
-                      )}`}
-                      className="flex items-center gap-2 text-[16px] cursor-pointer hover:bg-gray-100"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      <img
-                        src={category.icon}
-                        alt={category.name}
-                        className="w-5 h-5"
-                      />
-                      {category.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+                <div className="flex items-center gap-2 cursor-pointer">
+                  <p className="text-[17px] text-black font-semibold">
+                    {category.name}
+                  </p>
+                  <MdOutlineKeyboardArrowDown
+                    className={`font-bold text-xl transform transition-transform duration-300 text-black ${
+                      openCategory === category.id ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
+                </div>
+                {openCategory === category.id && (
+                  <ul className="dropdown-content menu absolute rounded-box z-10 w-[228px] p-2 mt-1 shadow-sm text-black bg-gradient-to-r from-lime-50 to-sky-50 hover:bg-gray-100">
+                    {category.type.map((subType, index) => (
+                      <li key={index}>
+                        <Link
+                          to=""
+                          className="flex items-center gap-2 text-[16px] cursor-pointer hover:bg-white"
+                          onClick={() => setOpenCategory(null)}
+                        >
+                          <img
+                            src={category.icon}
+                            alt={subType}
+                            className="w-5 h-5"
+                          />
+                          {subType}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
           </div>
           <div className="flex items-center gap-4">
-            <Link
-              to="/yourcart"
-              className="btn btn-ghost p-0 hover:bg-transparent"
-            >
+            {/*/yourcart*/}
+            <Link to="" className="btn btn-ghost p-0 hover:bg-transparent">
               <div class="relative flex items-center justify-center">
                 {/* Base Shape  */}
                 <IoNotifications className="text-2xl text-teal-500" />
@@ -105,17 +86,14 @@ const NavBar = ({ title, image }) => {
                 </div>
               </div>
             </Link>
-            <Link
-              to="/wishlist"
-              className="btn btn-ghost p-0 hover:bg-transparent"
-            >
+            {/*/wishlist*/}
+            <Link to="" className="btn btn-ghost p-1 hover:bg-transparent">
               <FaRegHeart className="text-2xl text-teal-500" />
             </Link>
             <div
-              className=""
-              ref={dropdownRef}
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              className="relative"
+              onMouseEnter={() => setIsUserDropdownOpen(true)}
+              onMouseLeave={() => setIsUserDropdownOpen(false)}
             >
               <div
                 tabIndex={0}
@@ -124,23 +102,24 @@ const NavBar = ({ title, image }) => {
               >
                 <LuUserRound className="font-bold text-xl text-black" />
               </div>
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
+              {isUserDropdownOpen && (
                 <ul
                   tabIndex={0}
-                  className="items-start dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-r from-sky-100 to-amber-100"
+                  className="items-start dropdown-content menu absolute right-0 mt-1 rounded-box z-10 w-[97px] p-2 shadow-sm text-black bg-gradient-to-r from-sky-100 to-amber-100"
                 >
                   <li>
+                    {/*/signup*/}{" "}
                     <Link
-                      to="/signup"
-                      className="w-[72px] hover:bg-gray-50"
+                      to=""
+                      className="w-[73px] hover:bg-white font-medium"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >
                       Sign Up
                     </Link>
+                    {/*/login*/}
                     <Link
-                      to="/login"
-                      className="w-[82px] hover:bg-gray-50"
+                      to=""
+                      className="w-[81px] hover:bg-white font-medium"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >
                       Login <CiLogin size={23} className="text-black" />
