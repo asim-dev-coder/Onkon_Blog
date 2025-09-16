@@ -15,17 +15,10 @@ const NavBar = ({ title, image }) => {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    fetch("/Product-Data/Products.json")
+    fetch("/Product-Data/ProductCategory.json")
       .then((res) => res.json())
       .then((data) => {
-        const uniqueCategories = [
-          ...new Set(
-            data.map(
-              (product) => product.category || product.productDisplayCategory
-            )
-          ),
-        ];
-        setCategories(uniqueCategories.filter(Boolean));
+        setCategories(data); // full array with id, name, image, icon
       });
   }, []);
 
@@ -57,47 +50,44 @@ const NavBar = ({ title, image }) => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <div
-              className="flex items-center cursor-pointer"
-            >
-              <p className="text-[17px] text-black">এআই</p>
-              <MdOutlineKeyboardArrowDown
-                className={`font-bold text-xl transform transition-transform duration-300 text-black ${
-                  isDropdownOpen ? "rotate-180" : "rotate-0"
-                }`}
-              />
+            <div className="flex gap-7">
+              {categories.map((category) => (
+                <Link to={`/products?category=${encodeURIComponent()}`}>
+                  <div className="flex items-center gap-2">
+                    <p className="text-[17px] text-black font-semibold">{category.name}</p>
+                    <MdOutlineKeyboardArrowDown
+                      className={`font-bold text-xl transform transition-transform duration-300 text-black ${
+                        isDropdownOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
+                  </div>
+                </Link>
+              ))}
             </div>
             {/* Dropdown Menu */}
             {isDropdownOpen && (
               <ul
                 tabIndex={0}
-                className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-l from-teal-200 to-amber-200 hover:bg-gray-100"
+                className="dropdown-content menu absolute rounded-box z-10 w-[178px] p-2 shadow-sm text-black bg-gradient-to-r from-amber-100 to-sky-100 hover:bg-gray-100"
               >
-                {categories.map((category, index) => (
-                  <li key={index}>
+                {categories.map((category) => (
+                  <li key={category.id}>
                     <Link
-                      to={`/products?category=${encodeURIComponent(category)}`}
-                      className="text-[16px] cursor-pointer hover:bg-gray-100"
-                      onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                      to={`/products?category=${encodeURIComponent(
+                        category.name
+                      )}`}
+                      className="flex items-center gap-2 text-[16px] cursor-pointer hover:bg-gray-100"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
-                      {category}
                       <img
-                        className="w-full h-full object-cover"
-                        src={image}
-                        alt={title}
+                        src={category.icon}
+                        alt={category.name}
+                        className="w-5 h-5"
                       />
+                      {category.name}
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <Link
-                    to="/products"
-                    className="text-[16px] cursor-pointer hover:bg-gray-100"
-                    onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
-                  >
-                    Settings
-                  </Link>
-                </li>
               </ul>
             )}
           </div>
