@@ -184,8 +184,8 @@ const TopHeader = () => {
             </div>
           </div>
           <div className="flex text-2xl font-semibold">
-            <h1 className="caveat text-black text-3xl">Assim</h1>
-            <span className="caveat text-sky-500 text-3xl">Dashboard</span>
+            <h1 className="caveat text-black text-3xl">Tipu's</h1>
+            <span className="caveat text-sky-500 text-3xl">World</span>
           </div>
           <div className="flex items-center gap-4">
             <Link
