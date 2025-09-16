@@ -109,8 +109,8 @@ const NavBar = ({ title, image }) => {
           </div>
           <Link to="/" className="hidden lg:flex">
             <div className="flex text-2xl font-semibold">
-              <h1 className="caveat text-sky-500 text-3xl">Assim</h1>
-              <span className="caveat text-3xl">Dashboard</span>
+              <h1 className="caveat text-sky-500 text-3xl">Tipu's</h1>
+              <span className="caveat text-3xl">World</span>
             </div>
           </Link>
           <div>
