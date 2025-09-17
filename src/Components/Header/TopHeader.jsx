@@ -16,93 +16,10 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 
-
 const TopHeader = () => {
   const { totalItems } = useCart();
   return (
     <>
-      <div className="bg-gray-100  text-gray-500 text-sm  hidden md:block lg:hidden ">
-        <div className="flex items-center justify-between py-4 w-11/12 md:w-10/11 lg:w-9/12 mx-auto">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <MdOutlinePhoneInTalk />
-              <p>+8801580768366</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaWhatsapp />
-              <p>+8801580768366</p>
-            </div>
-          </div>
-
-          <div className="flex items-center md:gap-4">
-            <div className="flex items-center gap-4 ">
-              <LuUserRound className="text-2xl text-gray-600 cursor-pointer" />
-              <FaRegHeart className="text-2xl text-gray-600 cursor-pointer" />
-              <IoNotifications className="text-2xl text-gray-600 cursor-pointer" />
-            </div>
-            <div className="dropdown">
-              <div tabIndex={0} role="button">
-                <RxHamburgerMenu className="text-2xl text-sky-500 cursor-pointer" />
-              </div>
-
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content bg-white z-1 mt-4 h-screen w-70 p-2 shadow -ml-56 py-6"
-              >
-                <div className="flex items-center text-lg py-4 text-gray-600 font-medium justify-between px-4">
-                  <h1 className=""> My Menu</h1>
-                  <RxCross1
-                    className="cursor-pointer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      document.activeElement?.blur();
-                    }}
-                  />
-                </div>
-                <Link
-                  to="/"
-                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
-                >
-                  <p>Home </p>
-                  <CiCirclePlus className="text-xl" />
-                </Link>
-                {/*to="/about"*/}{" "}
-                <Link className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md">
-                  <p>About</p>
-                  <CiCirclePlus className="text-xl" />
-                </Link>
-                <Link
-                  to="/categories"
-                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
-                >
-                  <p>Categories</p>
-                  <CiCirclePlus className="text-xl" />
-                </Link>
-                <Link
-                  to="/products"
-                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
-                >
-                  <p>Products</p>
-                  <CiCirclePlus className="text-xl" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
-                >
-                  <p>Contact</p>
-                  <CiCirclePlus className="text-xl" />
-                </Link>
-                <div className="flex justify-center items-center py-10 gap-6 text-2xl text-sky-500">
-                  <FaFacebookSquare className="cursor-pointer" />
-                  <FaXTwitter className="cursor-pointer" />
-                  <FaSquareInstagram className="cursor-pointer" />
-                  <FaLinkedin className="cursor-pointer" />
-                </div>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="bg-gradient-to-b from-sky-100 via-lime-100 to-white text-gray-500 text-sm md:hidden">
         <div className="flex items-center justify-between py-2 w-11/12 mx-auto">
           <div className="dropdown">
@@ -184,13 +101,15 @@ const TopHeader = () => {
               </div>
             </div>
           </div>
-          <div className="flex text-2xl font-semibold">
-            <h1 className="caveat text-black text-3xl">Tipu's</h1>
-            <span className="caveat text-sky-500 text-3xl">World</span>
-          </div>
+          <Link to="/">
+            <div className="flex text-2xl font-semibold">
+              <h1 className="caveat text-black text-3xl">Tipu's</h1>
+              <span className="caveat text-sky-500 text-3xl">World</span>
+            </div>
+          </Link>
           <div className="flex items-center gap-4">
-            <Link
-              to="/yourcart"
+            {/*/notification*/}<Link
+              to=""
               className="btn btn-ghost p-0 hover:bg-transparent"
             >
               <div class="relative flex items-center justify-center">
@@ -202,10 +121,8 @@ const TopHeader = () => {
                 </div>
               </div>
             </Link>
-            <Link
-              to="/wishlist"
-              className="btn btn-ghost p-0 hover:bg-transparent"
-            >
+            {/*/wishlist*/}{" "}
+            <Link to="" className="btn btn-ghost p-1 hover:bg-transparent">
               <FaRegHeart className="text-2xl text-sky-500" />
             </Link>
             <div className="dropdown dropdown-end">
@@ -229,6 +146,88 @@ const TopHeader = () => {
                     Login <CiLogin size={23} className="text-black" />
                   </Link>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-100  text-gray-500 text-sm  hidden md:block lg:hidden ">
+        <div className="flex items-center justify-between py-4 w-11/12 md:w-10/11 lg:w-9/12 mx-auto">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <MdOutlinePhoneInTalk />
+              <p>+8801580768366</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaWhatsapp />
+              <p>+8801580768366</p>
+            </div>
+          </div>
+
+          <div className="flex items-center md:gap-4">
+            <div className="flex items-center gap-4 ">
+              <LuUserRound className="text-2xl text-gray-600 cursor-pointer" />
+              <FaRegHeart className="text-2xl text-gray-600 cursor-pointer" />
+              <IoNotifications className="text-2xl text-gray-600 cursor-pointer" />
+            </div>
+            <div className="dropdown">
+              <div tabIndex={0} role="button">
+                <RxHamburgerMenu className="text-2xl text-sky-500 cursor-pointer" />
+              </div>
+
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-white z-1 mt-4 h-screen w-70 p-2 shadow -ml-56 py-6"
+              >
+                <div className="flex items-center text-lg py-4 text-gray-600 font-medium justify-between px-4">
+                  <h1 className=""> My Menu</h1>
+                  <RxCross1
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      document.activeElement?.blur();
+                    }}
+                  />
+                </div>
+                <Link
+                  to="/"
+                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
+                >
+                  <p>Home </p>
+                  <CiCirclePlus className="text-xl" />
+                </Link>
+                {/*to="/about"*/}{" "}
+                <Link className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md">
+                  <p>About</p>
+                  <CiCirclePlus className="text-xl" />
+                </Link>
+                <Link
+                  to="/categories"
+                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
+                >
+                  <p>Categories</p>
+                  <CiCirclePlus className="text-xl" />
+                </Link>
+                <Link
+                  to="/products"
+                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
+                >
+                  <p>Products</p>
+                  <CiCirclePlus className="text-xl" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="flex justify-between items-center border border-gray-400 m-2 p-2 hover:border-[#1198ad] rounded-md"
+                >
+                  <p>Contact</p>
+                  <CiCirclePlus className="text-xl" />
+                </Link>
+                <div className="flex justify-center items-center py-10 gap-6 text-2xl text-sky-500">
+                  <FaFacebookSquare className="cursor-pointer" />
+                  <FaXTwitter className="cursor-pointer" />
+                  <FaSquareInstagram className="cursor-pointer" />
+                  <FaLinkedin className="cursor-pointer" />
+                </div>
               </ul>
             </div>
           </div>

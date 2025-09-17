@@ -7,7 +7,7 @@ import Home from "./Pages/Home/Home.jsx";
 import About from "./Pages/About/About.jsx";
 import Contact from "./Pages/Contact Us/Contact.jsx";
 import Review from "./Pages/Review/Review.jsx";
-import YourCarts from "./Pages/Your Cart/YourCarts.jsx";
+import Notification from "./Pages/Notification/Notification.jsx";
 import FAQ from "./Pages/FAQ/FAQ.jsx";
 import Products from "./Pages/Products/Products.jsx";
 import Wishlist from "./Pages/Wishlist/Wishlist.jsx";
@@ -56,8 +56,8 @@ const router = createBrowserRouter([
         element: <SingleProduct />,
       },
       {
-        path: "/yourcart",
-        element: <YourCarts />,
+        path: "/notification",
+        element: <Notification />,
       },
       {
         path: "/wishlist",

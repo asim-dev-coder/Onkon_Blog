@@ -26,7 +26,7 @@ const NavBar = ({}) => {
   const { totalItems } = useCart();
   return (
     <>
-      <div className="bg-white border-b border-gray-200 hidden lg:block">
+      <div className="bg-white hidden lg:block border-b border-gray-200">
         <div className="flex justify-between items-center w-11/12 mx-auto py-3">
           <Link
             to="/"
@@ -52,7 +52,7 @@ const NavBar = ({}) => {
                   />
                 </div>
                 {openCategory === category.id && (
-                  <ul className="dropdown-content menu absolute rounded-box z-10 w-[228px] p-2 mt-1 shadow-sm text-black bg-gradient-to-r from-lime-50 to-sky-50 hover:bg-gray-100">
+                  <ul className="border-b-3 border-r-3 border-amber-400 dropdown-content menu absolute rounded-box z-10 w-[231px] p-2 mt-1 shadow-sm text-black bg-gradient-to-r from-lime-50 to-sky-50 hover:bg-gray-100">
                     {category.type.map((subType, index) => (
                       <li key={index}>
                         <Link
@@ -75,7 +75,7 @@ const NavBar = ({}) => {
             ))}
           </div>
           <div className="flex items-center gap-4">
-            {/*/yourcart*/}
+            {/*/notification*/}
             <Link to="" className="btn btn-ghost p-0 hover:bg-transparent">
               <div class="relative flex items-center justify-center">
                 {/* Base Shape  */}
@@ -108,17 +108,17 @@ const NavBar = ({}) => {
                   className="items-start dropdown-content menu absolute right-0 mt-1 rounded-box z-10 w-[97px] p-2 shadow-sm text-black bg-gradient-to-r from-sky-100 to-amber-100"
                 >
                   <li>
-                    {/*/signup*/}{" "}
+                    {/**/}{" "}
                     <Link
-                      to=""
+                      to="/signup"
                       className="w-[73px] hover:bg-white font-medium"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >
                       Sign Up
                     </Link>
-                    {/*/login*/}
+                    {/**/}
                     <Link
-                      to=""
+                      to="/login"
                       className="w-[81px] hover:bg-white font-medium"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >

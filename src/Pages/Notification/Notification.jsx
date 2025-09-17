@@ -5,8 +5,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
-
-const YourCarts = () => {
+const Notification = () => {
   const { cartItems, setCartItems } = useCart([
     {
       id: 1,
@@ -71,11 +70,10 @@ const YourCarts = () => {
 
   return (
     <div className="flex flex-col gap-6 md:gap-10 lg:gap-12">
-      <PageHeader page={"Your Cart"} />
+      <PageHeader page={"Notification"} />
       <div className="flex flex-col gap-6 md:gap-10 lg:gap-12">
         <HeadDetails
-          title={"Your"}
-          colortitle={"Cart"}
+          colortitle={"Notification"}
           subtitle={"Your product wish is our first priority."}
         />
         <div className="mb-10">
@@ -170,4 +168,4 @@ const YourCarts = () => {
   );
 };
 
-export default YourCarts;
+export default Notification;

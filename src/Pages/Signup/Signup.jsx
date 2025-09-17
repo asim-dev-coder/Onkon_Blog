@@ -33,7 +33,7 @@ const Signup = () => {
         <div className="flex gap-4">
           <img
             className="hidden lg:block h-[537px] relative overflow-hidden rounded-2xl"
-            src="https://i.ebayimg.com/images/g/H9YAAOSwIXJljrR7/s-l1200.jpg"
+            src="https://rukminim2.flixcart.com/image/704/844/j3lwh3k0/remote-control-toy/w/b/s/alpha-1s-intelligent-humanoid-robotic-ubtech-original-imaeup3ymcwsbjqv.jpeg?q=90&crop=false"
             alt="signupjsx"
           />
           <div className="w-[598px]">
