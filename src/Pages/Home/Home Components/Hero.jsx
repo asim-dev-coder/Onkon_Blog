@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
   return (
-    <>
+    <div className="w-11/12 mx-auto">
       <div
         className={`flex h-screen dark:bg-gray-900 ${
           isSideMenuOpen ? "overflow-hidden" : ""
@@ -370,7 +370,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

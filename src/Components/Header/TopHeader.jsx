@@ -103,7 +103,7 @@ const TopHeader = () => {
           </div>
         </div>
       </div>
-      <div className="bg-amber-50 text-gray-500 text-sm md:hidden">
+      <div className="bg-gradient-to-b from-sky-100 via-lime-100 to-white text-gray-500 text-sm md:hidden">
         <div className="flex items-center justify-between py-2 w-11/12 mx-auto">
           <div className="dropdown">
             <label

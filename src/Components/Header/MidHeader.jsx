@@ -1,6 +1,3 @@
-import React from "react";
-import { LuUserRound } from "react-icons/lu";
-import { FaRegHeart } from "react-icons/fa6";
 import { IoBagOutline, IoSearchSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
@@ -27,34 +24,37 @@ const MidHeader = () => {
           </div>
         </Link>
         <div className="hidden lg:flex items-center">
-          <div className="flex justify-center gap-6">
-            {/* <Link to="/wishlist" className="flex items-center gap-2">
+          <div className="flex justify-center gap-6"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MidHeader;
+{
+  /* <Link to="/wishlist" className="flex items-center gap-2">
               <FaRegHeart className="text-2xl text-gray-500" />
               <p className="text-gray-500 text-xs" tabIndex={0} role="">
                 Wishlist <br />{" "}
                 <span className="font-extralight text-black">0-ITEMS</span>{" "}
               </p>
             </Link>
-
             <Link to="/addtocart" className="flex items-center gap-2">
               <IoBagOutline className="text-2xl text-gray-500" />
               <p className="text-gray-500 text-xs" tabIndex={0} role="">
                 Cart <br />{" "}
                 <span className="font-extralight text-black">0-ITEMS</span>{" "}
               </p>
-            </Link> */}
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile View */}
-      {/* <div className="md:hidden flex flex-col items-center gap-3 py-6 border-b border-gray-300 w-11/12 mx-auto">
+            </Link> */
+}
+{
+  /* Mobile View */
+}
+{
+  /* <div className="md:hidden flex flex-col items-center gap-3 py-6 border-b border-gray-300 w-11/12 mx-auto">
         <div className="w-full mx-auto flex items-center pt-4">
           <div className="relative w-full"></div>
         </div>
-      </div> */}
-    </div>
-  );
-};
-
-export default MidHeader;
+      </div> */
+}

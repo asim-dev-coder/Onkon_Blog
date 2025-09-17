@@ -133,12 +133,12 @@ const NavBar = ({}) => {
       </div>
       {/* Mobile View */}
       <div className="block lg:hidden gap-3 py-3 w-11/12 mx-auto">
-        <div className="w-full flex items-center pt-4">
+        <div className="w-full flex items-center">
           <div className="relative w-full">
             <input
               className="w-full pl-4 pr-10 py-3 text-sm text-gray-700 placeholder-gray-500 bg-white border border-gray-300 rounded-3xl focus:outline-none"
               type="text"
-              placeholder="Search Tasks..."
+              placeholder="Search..."
             />
             <IoSearchSharp className="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-500 text-lg cursor-pointer hover:text-[#1198ad] transition-colors duration-200" />
           </div>

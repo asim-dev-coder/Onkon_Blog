@@ -15,7 +15,7 @@ const Root = () => {
         <TopHeader />
       </div>
       <MidHeader />
-      <div className="sticky top-0 z-20">
+      <div className="sticky top-10 z-20">
         <NavBar />
       </div>
       <div className="w-11/12 mx-auto">
