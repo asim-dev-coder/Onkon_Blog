@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { LuUserRound } from "react-icons/lu";
@@ -20,6 +20,11 @@ import { FaListUl } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 const TopHeader = () => {
   const { totalItems } = useCart();
+  const [openMenu, setOpenMenu] = useState(null);
+
+  const toggleMenu = (menuId) => {
+    setOpenMenu(openMenu === menuId ? null : menuId);
+  };
   return (
     <>
       {" "}
@@ -41,7 +46,7 @@ const TopHeader = () => {
               className="dropdown-content menu bg-white shadow-lg w-60 h-screen -ml-5 z-50"
             >
               {" "}
-              <div className="absolute top-110 left-0 right-0 flex justify-center gap-4 p-6 bg-gray-50">
+              <div className="absolute top-155 left-0 right-0 flex justify-center gap-4 p-6 bg-gray-50">
                 {" "}
                 <FaFacebookSquare className="text-2xl text-blue-500 hover:text-blue-600 cursor-pointer transition-colors" />{" "}
                 <FaWhatsapp className="text-2xl text-green-500 hover:text-blue-600 cursor-pointer transition-colors" />{" "}
@@ -61,34 +66,136 @@ const TopHeader = () => {
               </div>{" "}
               <div className="p-2">
                 {" "}
-                <div
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
-                  onClick={() => setIsHomeDropdownOpen(false)}
-                >
-                  {" "}
-                  <span className="inline-flex justify-center items-center ml-2">
-                    {" "}
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {" "}
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                      ></path>{" "}
-                    </svg>{" "}
-                  </span>{" "}
-                  <span className="ml-2 text-sm tracking-wide truncate">
-                    {" "}
-                    Home{" "}
-                  </span>{" "}
-                </div>{" "}
+                <li className="space-y-0.5">
+                  {/* Apps Menu */}
+                  <button
+                    onClick={() => toggleMenu("menu-app")}
+                    className={`collapse-toggle flex items-center gap-2 w-full text-left ${
+                      openMenu === "menu-app" ? "bg-base-content/10" : ""
+                    }`}
+                  >
+                    <div className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500">
+                      <span className="inline-flex justify-center items-center ml-2">
+                        {" "}
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          {" "}
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                          ></path>{" "}
+                        </svg>{" "}
+                      </span>
+                      <div className="ml-2 text-sm tracking-wide truncate">
+                        Home
+                      </div>
+                    </div>
+                    <span
+                      className={`icon-[tabler--chevron-down] size-4 transition-all duration-300 ml-auto ${
+                        openMenu === "menu-app" ? "rotate-180" : ""
+                      }`}
+                    ></span>
+                  </button>
+                  {openMenu === "menu-app" && (
+                    <ul className="collapse w-auto space-y-0.5 overflow-hidden transition-[height] duration-300">
+                      <li>
+                        <a href="#" className="flex items-center gap-2">
+                          <span className="icon-[tabler--message] size-5"></span>
+                          এআই
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" className="flex items-center gap-2">
+                          <span className="icon-[tabler--calendar] size-5"></span>
+                          প্রোগ্রামিং
+                        </a>
+                      </li>
+                      {/* Academy Menu */}
+                      <li className="space-y-0.5">
+                        <button
+                          onClick={() => toggleMenu("sub-menu-academy")}
+                          className={`collapse-toggle flex items-center gap-2 w-full text-left ${
+                            openMenu === "sub-menu-academy"
+                              ? "bg-base-content/10"
+                              : ""
+                          }`}
+                        >
+                          <span className="icon-[tabler--book] size-5"></span>
+                          রোবোটিক্স
+                          <span
+                            className={`icon-[tabler--chevron-down] size-4 ml-auto ${
+                              openMenu === "sub-menu-academy"
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                          ></span>
+                        </button>
+
+                        {openMenu === "sub-menu-academy" && (
+                          <ul className="collapse w-auto space-y-0.5 overflow-hidden transition-[height] duration-300">
+                            <li>
+                              <a href="#" className="flex items-center gap-2">
+                                <span className="icon-[tabler--books] size-5"></span>
+                                Courses
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" className="flex items-center gap-2">
+                                <span className="icon-[tabler--list-details] size-5"></span>
+                                Course details
+                              </a>
+                            </li>
+
+                            {/* Stats Submenu */}
+                            <li className="space-y-0.5">
+                              <button
+                                onClick={() =>
+                                  toggleMenu("sub-menu-academy-stats")
+                                }
+                                className={`collapse-toggle flex items-center gap-2 w-full text-left ${
+                                  openMenu === "sub-menu-academy-stats"
+                                    ? "bg-base-content/10"
+                                    : ""
+                                }`}
+                              >
+                                <span className="icon-[tabler--chart-bar] size-5"></span>
+                                Stats
+                                <span
+                                  className={`icon-[tabler--chevron-down] size-4 ml-auto ${
+                                    openMenu === "sub-menu-academy-stats"
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                ></span>
+                              </button>
+
+                              {openMenu === "sub-menu-academy-stats" && (
+                                <ul className="collapse w-auto space-y-0.5 overflow-hidden transition-[height] duration-300">
+                                  <li>
+                                    <a
+                                      href="#"
+                                      className="flex items-center gap-2"
+                                    >
+                                      <span className="icon-[tabler--chart-donut] size-5"></span>
+                                      Goals
+                                    </a>
+                                  </li>
+                                </ul>
+                              )}
+                            </li>
+                          </ul>
+                        )}
+                      </li>
+                    </ul>
+                  )}
+                </li>
                 {/* Notifications */}{" "}
                 <Link
                   to="/notifications"
