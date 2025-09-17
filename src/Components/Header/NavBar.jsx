@@ -191,7 +191,7 @@ const NavBar = ({}) => {
                 onMouseLeave={() => setOpenCategory(null)}
               >
                 <div className="flex items-center gap-2 cursor-pointer">
-                  <p className="text-[17px] text-black font-semibold">
+                  <p className="text-[17px] hover:text-sky-500 text-black font-semibold">
                     {category.name}
                   </p>
                   <MdOutlineKeyboardArrowDown
@@ -201,7 +201,7 @@ const NavBar = ({}) => {
                   />
                 </div>
                 {openCategory === category.id && (
-                  <ul className="border-b-3 border-r-3 border-amber-400 dropdown-content menu absolute rounded-box z-10 w-[231px] p-2 mt-1 shadow-sm text-black bg-gradient-to-r from-lime-50 to-sky-50 hover:bg-gray-100">
+                  <ul className="border-b-3 border-r-3 border-amber-400 dropdown-content menu absolute rounded-box z-10 w-[231px] p-1 mt-1 shadow-sm text-black bg-gradient-to-r from-lime-50 to-sky-50 hover:bg-gray-100">
                     {category.type.map((subType, index) => (
                       <li key={index}>
                         <Link
@@ -210,11 +210,11 @@ const NavBar = ({}) => {
                           onClick={() => setOpenCategory(null)}
                         >
                           <img
-                            src={category.icon}
+                            src={subType.icon}
                             alt={subType}
-                            className="w-5 h-5"
+                            className="w-10 h-10"
                           />
-                          {subType}
+                          {subType.name}
                         </Link>
                       </li>
                     ))}

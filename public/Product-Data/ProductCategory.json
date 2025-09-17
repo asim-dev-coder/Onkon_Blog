@@ -2,64 +2,91 @@
   {
     "id": 1,
     "name": "এআই",
-    "type": ["মেশিন লার্নিং", "ডেটা সায়েন্স"],
-    "image": "https://t3.ftcdn.net/jpg/11/85/63/60/360_F_1185636004_4bj2yTD1JMWivPFQOSetCcbBhgaCOaGE.jpg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/8080/8080628.png"
+    "type": [
+      {
+        "name": "মেশিন লার্নিং",
+        "icon": "https://static.vecteezy.com/system/resources/previews/004/655/703/non_2x/trendy-design-icon-of-machine-learning-vector.jpg"
+      },
+      {
+        "name": "ডেটা সায়েন্স",
+        "icon": "https://p.kindpng.com/picc/s/82-827088_transparent-science-icons-png-connections-icons-png-png.png"
+      }
+    ]
   },
   {
     "id": 2,
     "name": "প্রোগ্রামিং",
-    "type": ["ছোটদের স্ক্র্যচ প্রোগ্রামিং"],
-    "image": "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/ah0ud2p9qfsvf2sqer0p",
-    "icon": "https://cdn-icons-png.flaticon.com/128/1047/1047813.png"
+    "type": [
+      {
+        "name": "ছোটদের স্ক্র্যচ প্রোগ্রামিং",
+        "icon": "https://scratchbangladesh.com/wp-content/uploads/2024/11/Copy-of-Scratch-Intermi.jpg"
+      }
+    ]
   },
   {
     "id": 3,
     "name": "রোবোটিক্স",
-    "type": ["আলফা ১", "ড্রোন"],
-    "image": "https://media.printables.com/media/prints/638980/images/5050324_41f4fa37-1a92-46fe-aa46-1d3643f52497_ef82759b-0317-48a3-aa57-62340e5b7d22/thumbs/inside/1280x960/png/tesla-logo.webp",
-    "icon": "https://cdn-icons-png.flaticon.com/128/10981/10981617.png"
+    "type": [
+      {
+        "name": "আলফা ১",
+        "icon": "https://3dtool.ru/upload/iblock/5dc/5dc43da449821817f40d3b8bdb675b35.jpg"
+      },
+      {
+        "name": "ড্রোন",
+        "icon": "https://img.freepik.com/premium-vector/drone-icon-logo-template-flying-drone-with-action-camera-vector-illustration_746655-2202.jpg"
+      }
+    ]
   },
   {
     "id": 4,
     "name": "টেক দুনিয়া",
-    "type": ["গেমিং ল্যাপটপ"],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      {
+        "name": "গেমিং ল্যাপটপ",
+        "icon": "https://static.vecteezy.com/system/resources/previews/023/580/530/non_2x/online-laptop-gaming-cartoon-illustration-vector.jpg"
+      }
+    ]
   },
   {
     "id": 5,
     "name": "স্পোর্টস",
-    "type": ["ফুটবল", "ক্রিকেট"],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      {
+        "name": "ফুটবল",
+        "icon": "https://static.vecteezy.com/system/resources/previews/004/693/432/non_2x/simple-football-sport-icon-on-white-background-free-vector.jpg"
+      },
+      {
+        "name": "ক্রিকেট",
+        "icon": "https://www.shutterstock.com/image-vector/sport-cricket-indian-premier-league-600nw-2051585033.jpg"
+      }
+    ]
   },
   {
     "id": 6,
     "name": "গেমিং",
-    "type": ["", ""],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      
+    ]
   },
   {
     "id": 7,
     "name": "ফটোগ্রাফি",
-    "type": ["", ""],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      
+    ]
   },
   {
     "id": 8,
     "name": "ট্রাভেল",
-    "type": ["", ""],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      
+    ]
   },
   {
     "id": 9,
     "name": "খাইদাই",
-    "type": ["", ""],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg",
-    "icon": "https://cdn-icons-png.flaticon.com/128/2553/2553651.png"
+    "type": [
+      
+    ]
   }
 ]
