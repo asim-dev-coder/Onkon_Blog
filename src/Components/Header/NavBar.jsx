@@ -77,7 +77,7 @@ const NavBar = ({}) => {
                 {/* Notifications */}
                 <Link
                   to="/notifications"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500 pr-2"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500 pr-2"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
@@ -103,7 +103,7 @@ const NavBar = ({}) => {
                 {/* Messages */}
                 <Link
                   to="/"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
@@ -117,7 +117,7 @@ const NavBar = ({}) => {
                 {/* Follow */}
                 <Link
                   to="/"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
@@ -131,7 +131,7 @@ const NavBar = ({}) => {
                 {/* Lists */}
                 <Link
                   to="/"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
@@ -145,7 +145,7 @@ const NavBar = ({}) => {
                 {/* Profile */}
                 <Link
                   to="/"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
@@ -171,7 +171,7 @@ const NavBar = ({}) => {
                 {/* Settings */}
                 <Link
                   to="/"
-                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
+                  className="rounded-lg relative flex flex-row items-center h-11 focus:outline-none hover:bg-white text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-green-500"
                   onClick={() => setIsHomeDropdownOpen(false)}
                 >
                   <span className="inline-flex justify-center items-center ml-2">
