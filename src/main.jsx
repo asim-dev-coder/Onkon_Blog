@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <SingleProduct />,
       },
       {
-        path: "/notification",
+        path: "/notifications",
         element: <Notification />,
       },
       {

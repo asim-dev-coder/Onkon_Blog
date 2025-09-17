@@ -11,7 +11,7 @@ const Root = () => {
   return (
     <div className="bg-white">
       {/* <MouseAnimation /> */}
-      <div className="sticky top-0 z-10">
+      <div className="sticky top-0 z-20">
         <TopHeader />
       </div>
       <MidHeader />

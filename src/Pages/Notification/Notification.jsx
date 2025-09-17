@@ -74,7 +74,7 @@ const Notification = () => {
       <div className="flex flex-col gap-6 md:gap-10 lg:gap-12">
         <HeadDetails
           colortitle={"Notification"}
-          subtitle={"Your product wish is our first priority."}
+          subtitle={"Find Notifications."}
         />
         <div className="mb-10">
           <div className="space-y-6 text-gray-600">
@@ -143,24 +143,6 @@ const Notification = () => {
                 </div>
               </div>
             ))}
-
-            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-              <div className="flex justify-between items-center">
-                <div className="font-medium text-base sm:text-lg">
-                  Total (
-                  {cartItems.reduce((acc, item) => acc + item.quantity, 0)}{" "}
-                  items)
-                </div>
-                <div className="font-bold text-lg sm:text-xl">
-                  {totalPrice.toFixed(2)} BDT
-                </div>
-              </div>
-              <Link to="/login">
-                <button className="mt-4 w-full bg-sky-500 hover:bg-[#426fdf] text-white py-2 rounded-md  transition-colors cursor-pointer">
-                  Proceed to Checkout
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
       </div>
